@@ -17,4 +17,4 @@ class LoginSuccess extends LoginState {
   LoginSuccess(this.user);
 }
 
-class LoginLogout extends LoginState {}
+class Logout extends LoginState {}

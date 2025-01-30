@@ -13,7 +13,7 @@ class CustomTextField extends StatefulWidget {
     this.prefixIcon,
     this.prefixIconColor,
     this.validator,
-    this.isPassword=false ,
+    this.isPassword = false,
   }); // Added borderColor parameter
   final String labelText;
   final String hintText;
@@ -24,8 +24,8 @@ class CustomTextField extends StatefulWidget {
   final Color borderColor; // Added borderColor property
   final Icon? prefixIcon;
   final Color? prefixIconColor;
-    final String? Function(String?)? validator;
-  final bool isPassword ;
+  final String? Function(String?)? validator;
+  final bool isPassword;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -43,7 +43,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         controller: widget.controller,
         onChanged: widget.onChange,
         onSaved: widget.onSaved,
-        validator:widget.validator ,
+        validator: widget.validator,
         cursorColor: Colors.black,
         maxLines: widget.maxLines,
         decoration: InputDecoration(
@@ -57,19 +57,19 @@ class _CustomTextFieldState extends State<CustomTextField> {
           enabledBorder: buildBorder(widget.borderColor),
           focusedBorder: buildBorder(const Color(0xFF478ecc)),
           prefixIcon: widget.prefixIcon,
-          prefixIconColor:widget.prefixIconColor ,
+          prefixIconColor: widget.prefixIconColor,
           suffixIcon: widget.isPassword
               ? IconButton(
-            icon: Icon(
-              _obscureText ? Icons.visibility_off : Icons.visibility,
-              color: Colors.grey,
-            ),
-            onPressed: () {
-              setState(() {
-                _obscureText = !_obscureText;
-              });
-            },
-          )
+                  icon: Icon(
+                    _obscureText ? Icons.visibility_off : Icons.visibility,
+                    color: Colors.grey,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _obscureText = !_obscureText;
+                    });
+                  },
+                )
               : null,
         ),
       ),

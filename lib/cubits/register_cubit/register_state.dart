@@ -17,5 +17,3 @@ class RegisterSuccess extends RegisterState {
   final User user;
   RegisterSuccess(this.user);
 }
-
-class RegisterLogout extends RegisterState {}

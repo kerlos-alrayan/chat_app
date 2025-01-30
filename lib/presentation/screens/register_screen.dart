@@ -1,10 +1,10 @@
 import 'package:chat_app/presentation/screens/home_screen.dart';
+import 'package:chat_app/presentation/screens/login_screen.dart';
 import 'package:chat_app/presentation/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../cubits/register_cubit/register_cubit.dart';
-import '../login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
